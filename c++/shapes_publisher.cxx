@@ -68,11 +68,6 @@ void run_publisher_application(unsigned int domain_id, unsigned int sample_count
     // DDS objects behave like shared pointers or value types
     // (see https://community.rti.com/best-practices/use-modern-c-types-correctly)
 
-    //dds::core::QosProvider qos_provider = dds::core::QosProvider::Default();
-
-    // Get the participant qos from the qos provider
-    //dds::domain::qos::DomainParticipantQos participant_qos = qos_provider.participant_qos();
-    
     // Start communicating in a domain, usually one participant per application
     dds::domain::DomainParticipant participant(domain_id/*, participant_qos*/);
 
